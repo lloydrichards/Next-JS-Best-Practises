@@ -4,5 +4,98 @@
   "editor.codeActionsOnSave": {
     "source.fixAll": true,
     "source.organizeImports": true
-  }
+  },
+  "todo-tree.filtering.excludeGlobs": ["**/node_modules"],
+  "todo-tree.general.tags": [
+    "TODO",
+    "BUG",
+    "FIXME",
+    "NOTE",
+    "OPTIMIZE",
+    "HACK",
+    "XXX",
+    "[ ]",
+    "[]",
+    "[x]",
+    "[X]",
+    "[-]",
+    "[/]"
+  ],
+  "todo-tree.general.tagGroups": {
+    "[ ]": ["[ ]", "[]"],
+    "[x]": ["[x]", "[X]"],
+    "[-]": ["[-]", "[/]"]
+  },
+  "todo-tree.regex.subTagRegex": "^\\s*\\((.*)\\)",
+  "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+  "todo-tree.highlights.defaultHighlight": {
+    "icon": "tag",
+    "type": "line",
+    "gutterIcon": true
+  },
+  "todo-tree.general.statusBar": "total",
+  "todo-tree.general.statusBarClickBehaviour": "cycle",
+  "todo-tree.highlights.customHighlight": {
+    "TODO": {
+      "icon": "checklist",
+      "iconColour": "#BF88B1",
+      "foreground": "#BF88B1"
+    },
+    "BUG": {
+      "icon": "bug",
+      "iconColour": "#F37476",
+      "foreground": "#1A1B1F",
+      "background": "#F37476",
+      "hideFromStatusBar": false
+    },
+    "FIXME": {
+      "icon": "tools",
+      "iconColour": "#F37476",
+      "foreground": "#F37476"
+    },
+    "NOTE": {
+      "icon": "pin",
+      "gutterIcon": false,
+      "iconColour": "#6EBB5E",
+      "foreground": "#6EBB5E"
+    },
+    "OPTIMIZE": {
+      "icon": "rocket",
+      "iconColour": "#F0CE6C",
+      "foreground": "#F0CE6C"
+    },
+    "HACK": {
+      "icon": "beaker",
+      "iconColour": "#98C3BD",
+      "foreground": "#98C3BD"
+    },
+    "XXX": {
+      "icon": "flame",
+      "iconColour": "#F0CE6C",
+      "foreground": "#1A1B1F",
+      "background": "#F0CE6C"
+    },
+    "[ ]": {
+      "icon": "circle",
+      "hideFromTree": true,
+      "foreground": "#E4E2E6",
+      "iconColour": "#F0CE6C"
+    },
+    "[x]": {
+      "icon": "check-circle",
+      "hideFromTree": true,
+      "foreground": "#6EBB5E",
+      "iconColour": "#6EBB5E",
+      "opacity": 10
+    },
+    "[-]": {
+      "icon": "circle-slash",
+      "hideFromTree": true,
+      "textDecoration": "line-through",
+      "foreground": "#FEC38D",
+      "iconColour": "#FEC38D"
+    }
+  },
+  "todo-tree.tree.labelFormat": "${tag:uppercase} ${after} [${filename}]",
+  "todo-tree.tree.tooltipFormat": "${filename}:[${line}] in ${filepath}"
 }

@@ -3,6 +3,16 @@ import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
+  // NOTE: This is here because sometimes an intermittent issue appears.
+  // OPTIMIZE: This could be reworked to not do a O(N2) lookup.
+  // TODO from John: Add a check here to ensure these are always strings.
+  // HACK(lloyd): I am doing something here that is horrible, but it works for now...
+  // XXX: Let's do this better next time? It's bad.
+  // [ ] This is a task that needs to be done.
+  // [x] This is a task that has been completed.
+  // [-] This is a task that has been cancelled.
+  // FIXME: We sometimes get an undefined index in this array.
+  // BUG: If the user inputs "Easter" we always output "Egg", even if they wanted a "Bunny".
   return (
     <div className={styles.container}>
       <Head>
@@ -12,10 +22,10 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
+
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
-
         <p className={styles.description}>
           Get started by editing{' '}
           <code className={styles.code}>pages/index.tsx</code>
